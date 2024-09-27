@@ -22,7 +22,7 @@
             createSpan("Sua idade: ");
             campoIdade = createInput("5");
             campoFantasia = createCheckbox("multiplayer?");
-            campoAventura = createCheckbox("qual sua idade?");
+            campoAventura = createCheckbox("jogos solo?");
         }
 
         function draw() {
@@ -41,11 +41,11 @@
         function geraRecomendacao(idade, gostaDeFantasia, gostaDeAventura) {
             if (idade >= 10) {
                 if (idade >= 14) {
-                    return "O menino que descobriu o vento";
+                    return "box";
                 } else {
                     if (idade >= 12) {
                         if (gostaDeFantasia || gostaDeAventura) {
-                            return "Homem aranha: no aranhaverso";          
+                            return "futebol";          
                         } else {
                             return "Ladrões de bicicleta";
                         }
