@@ -72,19 +72,29 @@
 
       // Função para exibir o jogo com base na idade
       function geraRecomendacao(idade) {
-        if (idade == 14) {
+
+        if (idade >= 0 && idade <= 5) {
           gameIframe.src = "https://scratch.mit.edu/projects/97812535/embed";
           gameIframe.classList.remove('hidden');
           statusMessage.textContent = "Bom jogo!";
-        } else if (idade == 16) {
+        } else if (idade >= 6 && idade <= 10) {
           gameIframe.src = "https://scratch.mit.edu/projects/905427269/embed";
           gameIframe.classList.remove('hidden');
           statusMessage.textContent = "Bom jogo!";
-        } else {
+        } else if (idade >= 11 && idade <= 12) {
+          gameIframe.src = "https://scratch.mit.edu/projects/62245868/embed";
+          gameIframe.classList.remove('hidden');
+          statusMessage.textContent = "Bom jogo!";
+        }  else {
           gameIframe.classList.add('hidden');
           statusMessage.textContent = "Em construção";
         }
+  
+         
       }
+
+
+
 
       // Detecta o pressionamento da tecla Enter no campo de idade
       idadeInput.addEventListener('keydown', function(event) {
